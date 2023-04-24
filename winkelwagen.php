@@ -1,7 +1,7 @@
 <?php
 
 // Product toevoegen aan de winkelwagen
-function voeg_product_toe_aan_winkelwagen($product_id, $aantal = 1) {
+function voeg_product_toe_aan_winkelwagen($product_id, $aantal) {
     // Controleren of het product al in de winkelwagen zit
     if (isset($_SESSION['winkelwagen'][$product_id])) {
         // Product aantal bijwerken
