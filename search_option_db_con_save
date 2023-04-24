@@ -1,0 +1,22 @@
+<?php
+
+$config = parse_ini_file('/path/to/config.ini');
+
+// Gebruik de configuratie-instellingen
+$host = $config['database_host'];
+$name = $config['database_name'];
+$user = $config['database_user'];
+$pass = $config['database_password'];
+
+// Maak de databaseverbinding
+$conn = mysqli_connect($host, $user, $pass, $name);
+
+// Controleer de verbinding
+if (!$conn) {
+    die("Verbinding mislukt: " . mysqli_connect_error());
+
+// Rest van de code zoals in search.php
+
+?>
+
+
